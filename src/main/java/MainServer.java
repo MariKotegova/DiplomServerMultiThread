@@ -16,7 +16,7 @@ public class MainServer {
                         try (PrintWriter out = new PrintWriter(clientSocket.getOutputStream(), true); // канал записи в сокет
                              BufferedReader in = new BufferedReader(  // канал чтения из сокета
                                      new InputStreamReader(clientSocket.getInputStream()))) {
-                            String name= in.readLine();// тот текст который передал клиент
+                            String name = in.readLine();// тот текст который передал клиент
                             clientTxtWrite(name); // тот текст который передал клиент запись в файл
                             System.out.println(name);
                             out.println(name);// возврвщает этот текст клиенту

@@ -3,7 +3,7 @@ import java.net.Socket;
 import java.time.LocalDateTime;
 import java.util.Scanner;
 
-public class MainClient {
+public class MainClient1 {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Введите имя пользователя");
@@ -49,14 +49,15 @@ public class MainClient {
         return port.toString();
     }
 
-    public static void clientTxtWrite (String txt){
-        try(BufferedWriter bw = new BufferedWriter(new FileWriter("file.log", true))){
+    public static void clientTxtWrite(String txt) {
+        try (BufferedWriter bw = new BufferedWriter(new FileWriter("file.log", true))) {
             bw.write(txt);
             bw.write("\n");
             bw.flush();
 
-        } catch (IOException ex){
+        } catch (IOException ex) {
             ex.printStackTrace();
         }
     }
 }
+

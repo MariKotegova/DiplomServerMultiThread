@@ -49,14 +49,15 @@ public class MainClient2 {
         return port.toString();
     }
 
-    public static void clientTxtWrite (String txt){
-        try(BufferedWriter bw = new BufferedWriter(new FileWriter("file.log", true))){
+    public static void clientTxtWrite(String txt) {
+        try (BufferedWriter bw = new BufferedWriter(new FileWriter("file.log", true))) {
             bw.write(txt);
             bw.write("\n");
             bw.flush();
 
-        } catch (IOException ex){
+        } catch (IOException ex) {
             ex.printStackTrace();
         }
     }
 }
+
